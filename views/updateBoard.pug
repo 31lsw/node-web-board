@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title 게시판 수정
+    body
+        h1 게시판 수정
+        form(action="updateBoard" method="post")
+            table(border=1)
+                tr
+                    th 번호
+                    td
+                        input(type="text" name="board_no" value=`${updateBoard.board_no}` readonly)
+                tr
+                    th 비밀번호
+                    td
+                        input(type="password" name="board_pw")
+                tr
+                    th 제목
+                    td
+                        input(type="text" name="board_title" value=`${updateBoard.board_title}`)
+                tr
+                    th 내용
+                    td
+                        textarea(rows="5" cols="50" name="board_content" value=`${updateBoard.board_content}`)
+                tr
+                    th 작성자
+                    td
+                        input(type="text" name="board_user" value=`${updateBoard.board_user}` readonly)
+            button 수정

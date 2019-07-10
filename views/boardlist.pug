@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title 게시판 목록
+    body
+        h1 게시판 목록
+        a(href="addBoard")
+            button(type="button") 글 추가
+        table(border=1)
+            tr
+                th 번호
+                th 제목
+                th 작성자
+            each board in model.boardList
+                tr
+                    td #{board.board_no}
+                    td 
+                        a(href="/boardDetail?board_no="+board.board_no) #{board.board_title}
+                    td #{board.board_user}
+        if model.currentPage > 1
+            a(href="/boardList?currentPage="+(model.currentPage-1)) 이전
+        if model.currentPage < model.lastPage
+            a(href="/boardList?currentPage="+(model.currentPage+1)) 다음

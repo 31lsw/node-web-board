@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title 게시판 상세보기
+    body
+        h1 게시판 상세보기
+        table(border=1)
+            tr
+                th 번호
+                td #{boardDetail.board_no}
+            tr
+                th 제목
+                td #{boardDetail.board_title}
+            tr
+                th 내용
+                td #{boardDetail.board_content}
+            tr
+                th 작성자
+                td #{boardDetail.board_user}
+            tr
+                th 날짜
+                td #{boardDetail.board_date}    
+        a(href="boardList")
+            button(type="button") 목록
+    
+        a(href="updateBoard?board_no="+boardDetail.board_no)
+            button(type="button") 수정
+    
+        a(href="deleteBoard?board_no="+boardDetail.board_no)
+            button(type="button") 삭제

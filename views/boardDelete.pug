@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title 게시판 삭제
+    body
+        h1 게시판 삭제
+        form(action="deleteBoard" method="post")
+            table(border=1)
+                tr
+                    th 번호
+                    td
+                        input(type="text" name="board_no" value=`${deleteBoard}` readonly)
+                tr
+                    th 비밀번호
+                    td
+                        input(type="password" name="board_pw")
+            button 삭제

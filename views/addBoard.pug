@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title 게시판 입력
+    body
+        h1 게시판 입력
+        form(action ="addBoard" method="post")
+            table(border=1)
+                tr
+                    th 비밀번호
+                    td 
+                        input(type="password" name="board_pw")
+                tr
+                    th 제목
+                    td
+                        input(type="text" name="board_title")
+                tr
+                    th 내용
+                    td
+                        textarea(name="board_content" rows="5" cols="50")
+                tr
+                    th 작성자
+                    td
+                        input(type="text" name="board_user")
+            button(type="submit") 글올리기
